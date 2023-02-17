@@ -1,5 +1,8 @@
 #ifndef __MOVEBASE_H
 #define __MOVEBASE_H
+/* Includes ------------------------------------------------------------------*/
+
+#include "arm_math.h"
 
 //×óÇ°ÂÖIDºÅ
 #define LEFT_FRONT_ID (1)

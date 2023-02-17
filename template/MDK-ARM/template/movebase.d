@@ -1,1 +1,10 @@
 template\movebase.o: ..\GDUT_User\MoveBase.c
+template\movebase.o: ..\GDUT_User\MoveBase.h
+template\movebase.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
+template\movebase.o: ../Drivers/CMSIS/Include/core_cm4.h
+template\movebase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+template\movebase.o: ../Drivers/CMSIS/Include/cmsis_version.h
+template\movebase.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+template\movebase.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+template\movebase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+template\movebase.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
