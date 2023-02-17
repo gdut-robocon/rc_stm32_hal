@@ -38,4 +38,6 @@ template\usart.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\usart.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\usart.o: ../Core/Inc/can.h
+template\usart.o: ../Core/Inc/main.h
 template\usart.o: ..\GDUT_User\elmo.h

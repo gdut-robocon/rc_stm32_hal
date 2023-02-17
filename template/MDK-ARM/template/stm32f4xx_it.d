@@ -37,6 +37,8 @@ template\stm32f4xx_it.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\stm32f4xx_it.o: ../Core/Inc/can.h
+template\stm32f4xx_it.o: ../Core/Inc/main.h
 template\stm32f4xx_it.o: ..\GDUT_User\elmo.h
 template\stm32f4xx_it.o: ../Core/Inc/stm32f4xx_it.h
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h

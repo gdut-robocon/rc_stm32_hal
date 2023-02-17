@@ -37,4 +37,6 @@ template\stm32f4xx_hal_msp.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\stm32f4xx_hal_msp.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\stm32f4xx_hal_msp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\stm32f4xx_hal_msp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\stm32f4xx_hal_msp.o: ../Core/Inc/can.h
+template\stm32f4xx_hal_msp.o: ../Core/Inc/main.h
 template\stm32f4xx_hal_msp.o: ..\GDUT_User\elmo.h

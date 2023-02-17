@@ -39,5 +39,7 @@ template\hareware.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\hareware.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\hareware.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\hareware.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\hareware.o: ../Core/Inc/can.h
+template\hareware.o: ../Core/Inc/main.h
 template\hareware.o: ../Core/Inc/tim.h
 template\hareware.o: ../Core/Inc/gpio.h

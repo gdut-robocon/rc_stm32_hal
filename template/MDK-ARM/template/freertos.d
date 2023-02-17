@@ -46,6 +46,8 @@ template\freertos.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\freertos.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\freertos.o: ../Core/Inc/can.h
+template\freertos.o: ../Core/Inc/main.h
 template\freertos.o: ..\GDUT_User\elmo.h
 template\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 template\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h

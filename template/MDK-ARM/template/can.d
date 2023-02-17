@@ -38,4 +38,5 @@ template\can.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\can.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\can.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\can.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\can.o: ../Core/Inc/can.h
 template\can.o: ..\GDUT_User\elmo.h

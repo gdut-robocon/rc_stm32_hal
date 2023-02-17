@@ -37,6 +37,8 @@ template\main.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\main.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\main.o: ../Core/Inc/can.h
+template\main.o: ../Core/Inc/main.h
 template\main.o: ..\GDUT_User\elmo.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
@@ -49,7 +51,6 @@ template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
-template\main.o: ../Core/Inc/can.h
 template\main.o: ../Core/Inc/tim.h
 template\main.o: ../Core/Inc/usart.h
 template\main.o: ../Core/Inc/gpio.h
