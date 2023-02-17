@@ -258,14 +258,14 @@ void SetPosLoopVel(CAN_HandleTypeDef* hcan, uint8_t ElmoNum, int32_t vel)
 	
 	data[0][1] = vel;
 	
-	TxData[0] = (uint8_t)(data[0][0] & 0xFF);
-	TxData[1] = (uint8_t)((data[0][0] >> 8) & 0xFF);
-	TxData[2] = (uint8_t)((data[0][0] >> 16) & 0xFF);
-	TxData[3] = (uint8_t)((data[0][0] >> 24) & 0xFF);
-	TxData[4] = (uint8_t)(data[0][1] & 0xFF);
-	TxData[5] = (uint8_t)((data[0][1] >> 8) & 0xFF);
-	TxData[6] = (uint8_t)((data[0][1] >> 16) & 0xFF);
-	TxData[7] = (uint8_t)((data[0][1] >> 24) & 0xFF);
+	TxData[0] = *(unsigned long*)&data[0][0]&0xff;
+	TxData[1] = (*(unsigned long*)&data[0][0]>>8)&0xff;
+	TxData[2] = (*(unsigned long*)&data[0][0]>>16)&0xff;
+	TxData[3] = (*(unsigned long*)&data[0][0]>>24)&0xff;
+	TxData[4] =  *(unsigned long*)&data[0][1]&0xff;
+	TxData[5] = (*(unsigned long*)&data[0][1]>>8)&0xff;
+	TxData[6] = (*(unsigned long*)&data[0][1]>>16)&0xff;
+	TxData[7] = (*(unsigned long*)&data[0][1]>>24)&0xff;
 
 	HAL_CAN_AddTxMessage(hcan, &TxHeader, TxData, &TxMailbox);
 	
@@ -535,14 +535,14 @@ void ReadActualVel(CAN_HandleTypeDef* hcan, uint8_t ElmoNum)
     TxMessage.RTR = CAN_RTR_DATA;
     TxMessage.DLC = 8;
     
-    TxData[0] = (uint8_t)(data[0][0] & 0xff);
-    TxData[1] = (uint8_t)((data[0][0] >> 8) & 0xff);
-    TxData[2] = (uint8_t)((data[0][0] >> 16) & 0xff);
-    TxData[3] = (uint8_t)((data[0][0] >> 24) & 0xff);
-    TxData[4] = (uint8_t)(data[0][1] & 0xff);
-    TxData[5] = (uint8_t)((data[0][1] >> 8) & 0xff);
-    TxData[6] = (uint8_t)((data[0][1] >> 16) & 0xff);
-    TxData[7] = (uint8_t)((data[0][1] >> 24) & 0xff);
+    TxData[0] = *(unsigned long*)&data[0][0]&0xff;
+    TxData[1] = (*(unsigned long*)&data[0][0]>>8)&0xff;
+    TxData[2] = (*(unsigned long*)&data[0][0]>>16)&0xff;
+    TxData[3] = (*(unsigned long*)&data[0][0]>>24)&0xff;
+    TxData[4] = *(unsigned long*)&data[0][1]&0xff;
+    TxData[5] = (*(unsigned long*)&data[0][1]>>8)&0xff;
+    TxData[6] = (*(unsigned long*)&data[0][1]>>16)&0xff;
+    TxData[7] = (*(unsigned long*)&data[0][1]>>24)&0xff;
     
     HAL_CAN_AddTxMessage(hcan, &TxMessage, TxData, &TxMailbox);
     
