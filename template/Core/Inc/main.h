@@ -67,6 +67,9 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define bsp_air_Callback_Pin GPIO_PIN_7
+#define bsp_air_Callback_GPIO_Port GPIOF
+#define bsp_air_Callback_EXTI_IRQn EXTI9_5_IRQn
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

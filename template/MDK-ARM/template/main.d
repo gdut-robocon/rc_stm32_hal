@@ -29,6 +29,8 @@ template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 template\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template\main.o: ..\GDUT_User\MoveBase.h
 template\main.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
@@ -48,5 +50,6 @@ template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
 template\main.o: ../Core/Inc/can.h
+template\main.o: ../Core/Inc/tim.h
 template\main.o: ../Core/Inc/usart.h
 template\main.o: ../Core/Inc/gpio.h

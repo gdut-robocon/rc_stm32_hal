@@ -30,6 +30,8 @@ template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.
 template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 template\hareware.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template\hareware.o: ../Core/Inc/main.h
 template\hareware.o: ..\GDUT_User\MoveBase.h
@@ -37,3 +39,5 @@ template\hareware.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\hareware.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\hareware.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\hareware.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\hareware.o: ../Core/Inc/tim.h
+template\hareware.o: ../Core/Inc/gpio.h

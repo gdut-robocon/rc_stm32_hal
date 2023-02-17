@@ -4,6 +4,7 @@
 "template\gpio.o"
 "template\freertos.o"
 "template\can.o"
+"template\tim.o"
 "template\usart.o"
 "template\stm32f4xx_it.o"
 "template\stm32f4xx_hal_msp.o"
