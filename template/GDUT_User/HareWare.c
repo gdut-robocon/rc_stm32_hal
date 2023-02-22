@@ -41,63 +41,58 @@ void MotorInit(void)
 Air_Contorl  Device;
 //定义变量
 static uint16_t PPM_buf[10]={0};
-uint16_t PPM_Databuf[10]={0};
+//uint16_t PPM_Databuf[10]={0};
 uint8_t ppm_update_flag=0;
 uint32_t now_ppm_time_send=0;
 uint32_t TIME_ISR_CNT=0,LAST_TIME_ISR_CNT=0;
 //TIM2_IRQHandler
 uint16_t Time_Sys[4]={0};
-uint16_t Microsecond_Cnt=0;;
+uint16_t Microsecond_Cnt=0;
+
+uint16_t PPM_Sample_Cnt = 0;//通道
+uint8_t PPM_Chn_Max = 8;//最大通道数
+uint32_t PPM_Time = 0;//获取通道时间
+uint16_t PPM_Okay = 0;//下一次解析状态
+uint16_t PPM_Databuf[8] = {0};//所有通道的数组
 
 #define Hour         3
 #define Minute       2
 #define Second       1
 #define MicroSecond  0
 
-void bsp_air_Callback_EXTI_IRQHandler(void)
-{
-	static uint32_t last_ppm_time=0,now_ppm_time=0;
-	static uint8_t ppm_ready=0,ppm_sample_cnt=0;
-	static uint16_t ppm_time_delta=0;//得到上升沿与下降沿的时间
-	 if (bsp_air_Callback_Pin == GPIO_PIN_7)
-  {
-    // 获取系统运行时间，单位us
-    last_ppm_time = now_ppm_time;
-    now_ppm_time = 10000 * HAL_GetTick() + __HAL_TIM_GET_COUNTER(&htim2);
-    ppm_time_delta = now_ppm_time - last_ppm_time;
+/**
+  * 函数功能: 按键外部中断回调函数
+  * 输入参数: GPIO_Pin：中断引脚
+  * 返 回 值: 无
+  * 说    明: 无
+ */
 
-    // PPM解析开始
-    if (ppm_ready == 1)
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	
+//	
+	if(GPIO_Pin==GPIO_PIN_7)//判断是否为接收器产生的中断，例程设置为PIN8
     {
-      if (ppm_time_delta >= 2200)
-      {
-        ppm_ready = 1;
-        ppm_sample_cnt = 0;
-        ppm_update_flag=1;
-      }
-      else if (ppm_time_delta >= 950 && ppm_time_delta <= 2050)
-      {
-        PPM_buf[ppm_sample_cnt++] = ppm_time_delta;
-        if (ppm_sample_cnt >= 8)
+        PPM_Time = TIM2 ->CNT;//将定时数转存
+        TIM2 -> CNT = 0;//计数器归零
+        if (PPM_Okay == 1)//判断是否是新的一轮解析
         {
-          memcpy(PPM_Databuf, PPM_buf, ppm_sample_cnt * sizeof(uint16_t));
-          ppm_sample_cnt = 0;
+            PPM_Sample_Cnt++;//通道数+1
+            PPM_Databuf[PPM_Sample_Cnt - 1] = PPM_Time;//把每一个通道的数值存入数组
+            if (PPM_Sample_Cnt >= PPM_Chn_Max)//判断是否超过额定通道数
+                PPM_Okay = 0;
         }
-      }
-      else
-      {
-        ppm_ready = 0;
-      }
+        if (PPM_Time >= 2050)//长时间无下降沿即无通道数据，进入下一轮解析
+        {
+            PPM_Okay = 1;
+            PPM_Sample_Cnt = 0;
+        }
     }
-    else if (ppm_time_delta >= 2200)
-    {
-      ppm_ready = 1;
-      ppm_sample_cnt = 0;
-			ppm_update_flag=0;
-    }
-  }
-}
-//无需声明,有weak
+	}
+
+
+
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if (htim->Instance == TIM2)  // 检查是否是TIM2定时器中断

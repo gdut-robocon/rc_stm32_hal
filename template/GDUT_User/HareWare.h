@@ -4,7 +4,8 @@
 #include "elmo.h"
 //Functions
 void MotorInit(void);
-void bsp_air_Callback_EXTI_IRQHandler(void);
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
+
 //struct
 typedef struct
 {

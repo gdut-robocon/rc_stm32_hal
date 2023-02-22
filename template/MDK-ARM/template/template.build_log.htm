@@ -5,37 +5,59 @@
 <h2>Tool Versions:</h2>
 IDE-Version: μVision V5.25.3.0
 Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 8456 Dell, 8563, LIC=IC93N-YDMDH-QID5M-XM3FD-MQ36X-RY0UF
+License Information: AD 陈同学的小计算机, ADS, LIC=HN0AE-52IXM-II25V-PGJIM-UVXYA-AU1DN
  
 Tool Versions:
-Toolchain:       MDK-ARM Professional  Version: 5.18
+Toolchain:       MDK-ARM Plus  Version: 5.15.0
 Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 1 (build 61)
-Assembler:       Armasm.exe V5.06 update 1 (build 61)
-Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
-Library Manager: ArmAr.exe V5.06 update 1 (build 61)
-Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
-CPU DLL:         SARMCM3.DLL V5.18
-Dialog DLL:      DCM.DLL V1.13.6.0
-Target DLL:      CMSIS_AGDI.dll V1.25.7.0
-Dialog DLL:      TCM.DLL V1.14.8.0
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DCM.DLL V1.13.2.0
+Target DLL:      CMSIS_AGDI.dll V1.21.12.0
+Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
-C:\Users\Dell\Desktop\rc\template\MDK-ARM\template.uvprojx
-Project File Date:  02/18/2023
+D:\Desktop\RC\rc_stm32_hal-main\rc_stm32_hal-main\template\MDK-ARM\template.uvprojx
+Project File Date:  02/22/2023
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'template'
-"template\template.axf" - 0 Error(s), 0 Warning(s).
+assembling startup_stm32f407xx.s...
+compiling HareWare.c...
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT"
+  #define __FPU_PRESENT             1U       /*!< FPU present                                   */
+../Drivers/CMSIS/Include/core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"
+        #define __FPU_USED       1U
+../GDUT_User/MoveBase.h(123): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\GDUT_User\HareWare.c(43): warning:  #177-D: variable "PPM_buf" was declared but never referenced
+  static uint16_t PPM_buf[10]={0};
+..\GDUT_User\HareWare.c: 4 warnings, 0 errors
+compiling tim.c...
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT"
+  #define __FPU_PRESENT             1U       /*!< FPU present                                   */
+../Drivers/CMSIS/Include/core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"
+        #define __FPU_USED       1U
+../GDUT_User/MoveBase.h(123): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/tim.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=14820 RO-data=752 RW-data=200 ZI-data=20248  
+FromELF: creating hex file...
+"template\template.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
-                ARM.CMSIS.4.5.0
+                http://www.keil.com/pack/ARM.CMSIS.4.3.0.pack
+                ARM.CMSIS.4.3.0
                 CMSIS (Cortex Microcontroller Software Interface Standard)
-   * Component: CORE Version: 4.3.0
+   * Component: CORE Version: 4.1.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.11.0.pack
@@ -44,13 +66,13 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_template
-  D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  D:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include
   D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:00
+   * Component: ARM::CMSIS:CORE:4.1.0
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
