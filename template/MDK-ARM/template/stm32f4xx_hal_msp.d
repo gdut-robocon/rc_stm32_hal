@@ -32,11 +32,11 @@ template\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 template\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 template\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 template\stm32f4xx_hal_msp.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-template\stm32f4xx_hal_msp.o: ..\GDUT_User\MoveBase.h
+template\stm32f4xx_hal_msp.o: ../GDUT_User/MoveBase.h
 template\stm32f4xx_hal_msp.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\stm32f4xx_hal_msp.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\stm32f4xx_hal_msp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\stm32f4xx_hal_msp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 template\stm32f4xx_hal_msp.o: ../Core/Inc/can.h
 template\stm32f4xx_hal_msp.o: ../Core/Inc/main.h
-template\stm32f4xx_hal_msp.o: ..\GDUT_User\elmo.h
+template\stm32f4xx_hal_msp.o: ../GDUT_User/elmo.h

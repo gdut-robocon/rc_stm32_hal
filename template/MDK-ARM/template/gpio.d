@@ -33,11 +33,11 @@ template\gpio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 template\gpio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 template\gpio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 template\gpio.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-template\gpio.o: ..\GDUT_User\MoveBase.h
+template\gpio.o: ../GDUT_User/MoveBase.h
 template\gpio.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\gpio.o: ../Drivers/CMSIS/Include/core_cm4.h
 template\gpio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 template\gpio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 template\gpio.o: ../Core/Inc/can.h
 template\gpio.o: ../Core/Inc/main.h
-template\gpio.o: ..\GDUT_User\elmo.h
+template\gpio.o: ../GDUT_User/elmo.h
