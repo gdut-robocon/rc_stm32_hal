@@ -1,5 +1,5 @@
 /* USER CODE BEGIN Header */
-//下面的注释一个都不要删，防止重新配置导致代码缺失 //
+//下面的注释一个都不要删，防止重新配置导致代码缺失
 /**
   ******************************************************************************
   * @file           : main.c
@@ -28,7 +28,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "HareWare.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +42,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+int rdata;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -70,6 +70,7 @@ void MX_FREERTOS_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
 
   /* USER CODE END 1 */
 
@@ -100,9 +101,16 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   MX_TIM2_Init();
+	 
   /* USER CODE BEGIN 2 */
 
 	HAL_TIM_Base_Start_IT(&htim2);
+	
+
+//HAL_UART_Receive_IT(&huart4, (uint8_t *)kRxBuffer, 50);
+//_HAL_UART_ENABLE_IT(&huart4,UART_IT_RXNE);
+HAL_UART_Receive_IT(&huart4, &ch, 1);
+//	MotorInit();
   /* USER CODE END 2 */
 
   /* Init scheduler */

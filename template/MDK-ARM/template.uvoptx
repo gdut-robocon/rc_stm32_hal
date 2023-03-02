@@ -190,6 +190,21 @@
           <WinNumber>1</WinNumber>
           <ItemText>memcpy</ItemText>
         </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ACTION_GL_POS_DATA</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ACTION_GL_POS_DATA</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ACTION_GL_POS_DATA</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>

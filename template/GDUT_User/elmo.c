@@ -447,6 +447,7 @@ void SendPosCmd(CAN_HandleTypeDef* hcan, uint8_t ElmoNum, uint8_t posMode, int32
     TxData[6] = (*(unsigned long*)&data[0][1]>>16)&0xff;
     TxData[7] = (*(unsigned long*)&data[0][1]>>24)&0xff;
 
+		
     if (HAL_CAN_AddTxMessage(hcan, &TxHeader, TxData, &mailbox) != HAL_OK)
     {
         // ÍøÂç´íÎó´¦Àí

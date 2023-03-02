@@ -54,3 +54,4 @@ template\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_
 template\main.o: ../Core/Inc/tim.h
 template\main.o: ../Core/Inc/usart.h
 template\main.o: ../Core/Inc/gpio.h
+template\main.o: ../GDUT_User/HareWare.h
