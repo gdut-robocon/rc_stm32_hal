@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.05 update 2 (build 169) Tool: armlink [4d0f33]
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
 
 ==============================================================================
 
@@ -1302,13 +1302,13 @@ Section Cross References
     pow.o(i.__hardfp_pow) refers to ddiv.o(.text) for __aeabi_ddiv
     pow.o(i.__hardfp_pow) refers to sqrt.o(i.sqrt) for sqrt
     pow.o(i.__hardfp_pow) refers to fabs.o(i.fabs) for fabs
+    pow.o(i.__hardfp_pow) refers to dflti.o(.text) for __aeabi_i2d
     pow.o(i.__hardfp_pow) refers to dunder.o(i.__mathlib_dbl_invalid) for __mathlib_dbl_invalid
+    pow.o(i.__hardfp_pow) refers to dmul.o(.text) for __aeabi_dmul
     pow.o(i.__hardfp_pow) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
     pow.o(i.__hardfp_pow) refers to dadd.o(.text) for __aeabi_dsub
-    pow.o(i.__hardfp_pow) refers to dmul.o(.text) for __aeabi_dmul
     pow.o(i.__hardfp_pow) refers to qnan.o(.constdata) for __mathlib_zero
     pow.o(i.__hardfp_pow) refers to poly.o(i.__kernel_poly) for __kernel_poly
-    pow.o(i.__hardfp_pow) refers to dflti.o(.text) for __aeabi_i2d
     pow.o(i.__hardfp_pow) refers to pow.o(.constdata) for .constdata
     pow.o(i.__hardfp_pow) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
     pow.o(i.__hardfp_pow) refers to dscalb.o(.text) for __ARM_scalbn
@@ -1325,8 +1325,8 @@ Section Cross References
     pow_x.o(i.____hardfp_pow$lsc) refers to sqrt.o(i.sqrt) for sqrt
     pow_x.o(i.____hardfp_pow$lsc) refers to fabs.o(i.fabs) for fabs
     pow_x.o(i.____hardfp_pow$lsc) refers to dflti.o(.text) for __aeabi_i2d
-    pow_x.o(i.____hardfp_pow$lsc) refers to dadd.o(.text) for __aeabi_dsub
     pow_x.o(i.____hardfp_pow$lsc) refers to dmul.o(.text) for __aeabi_dmul
+    pow_x.o(i.____hardfp_pow$lsc) refers to dadd.o(.text) for __aeabi_dsub
     pow_x.o(i.____hardfp_pow$lsc) refers to qnan.o(.constdata) for __mathlib_zero
     pow_x.o(i.____hardfp_pow$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
     pow_x.o(i.____hardfp_pow$lsc) refers to pow_x.o(.constdata) for .constdata
@@ -2583,8 +2583,8 @@ Image Symbol Table
     .data                                    0x20000018   Section        4  can.o(.data)
     HAL_RCC_CAN1_CLK_ENABLED                 0x20000018   Data           4  can.o(.data)
     .data                                    0x2000001c   Section       36  hareware.o(.data)
-    count                                    0x2000001c   Data           1  hareware.o(.data)
-    i                                        0x2000001d   Data           1  hareware.o(.data)
+    count                                    0x2000001d   Data           1  hareware.o(.data)
+    i                                        0x2000001e   Data           1  hareware.o(.data)
     .data                                    0x20000040   Section       12  stm32f4xx_hal.o(.data)
     .data                                    0x2000004c   Section        4  system_stm32f4xx.o(.data)
     .data                                    0x20000050   Section       60  tasks.o(.data)
@@ -2961,7 +2961,7 @@ Image Symbol Table
     Auto_taskHandle                          0x2000000c   Data           4  freertos.o(.data)
     data_update_tasHandle                    0x20000010   Data           4  freertos.o(.data)
     motor_control_tHandle                    0x20000014   Data           4  freertos.o(.data)
-    PPM_Chn_Max                              0x2000001e   Data           1  hareware.o(.data)
+    PPM_Chn_Max                              0x2000001c   Data           1  hareware.o(.data)
     ch                                       0x2000001f   Data           1  hareware.o(.data)
     Microsecond_Cnt                          0x20000020   Data           2  hareware.o(.data)
     PPM_Sample_Cnt                           0x20000022   Data           2  hareware.o(.data)
@@ -3268,7 +3268,7 @@ Memory Map of the image
 
     0x20000000   0x08004ff8   0x00000018   Data   RW          253    .data               freertos.o
     0x20000018   0x08005010   0x00000004   Data   RW          322    .data               can.o
-    0x2000001c   0x08005014   0x00000024   Data   RW          851    .data               hareware.o
+    0x2000001c   0x08005014   0x00000024   Data   RW          853    .data               hareware.o
     0x20000040   0x08005038   0x0000000c   Data   RW         2043    .data               stm32f4xx_hal.o
     0x2000004c   0x08005044   0x00000004   Data   RW         3608    .data               system_stm32f4xx.o
     0x20000050   0x08005048   0x0000003c   Data   RW         4266    .data               tasks.o
@@ -3297,38 +3297,38 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       496         44          0          4         80       2542   can.o
-       298         22          0          4       1720      64001   cmsis_os2.o
-         0          0          0          0          0      19464   event_groups.o
-       168         32        304         24          0       4735   freertos.o
-       144          8          0          0          0        991   gpio.o
-       616         72          0         36        100       5078   hareware.o
-       472         24          0         32      15360       4859   heap_4.o
-       138          0          0          0          0       3490   list.o
-       248         24          0          0          0     713108   main.o
+       496         44          0          4         80       2522   can.o
+       298         22          0          4       1720      64377   cmsis_os2.o
+         0          0          0          0          0      19420   event_groups.o
+       168         32        304         24          0       4663   freertos.o
+       144          8          0          0          0        975   gpio.o
+       616         72          0         36        100       5098   hareware.o
+       472         24          0         32      15360       4827   heap_4.o
+       138          0          0          0          0       3510   list.o
+       248         24          0          0          0     712928   main.o
          0          0          0          0          0        392   movebase.o
-       786         82          0         12          0      11489   port.o
-      1514         20          0          0         64      17236   queue.o
-        36          8        392          0       1024        840   startup_stm32f407xx.o
-       144         24          0         12          0       8785   stm32f4xx_hal.o
-       816          0          0          0          0      10139   stm32f4xx_hal_can.o
-       198         14          0          0          0      33871   stm32f4xx_hal_cortex.o
-       182          0          0          0          0       2099   stm32f4xx_hal_dma.o
-       520         52          0          0          0       2171   stm32f4xx_hal_gpio.o
-        56          4          0          0          0        874   stm32f4xx_hal_msp.o
-      1344         72          0          0          0       5232   stm32f4xx_hal_rcc.o
-      1110         72          0          0          0      10173   stm32f4xx_hal_tim.o
-       148         28          0          0          0       2465   stm32f4xx_hal_tim_ex.o
+       786         82          0         12          0      11433   port.o
+      1514         20          0          0         64      17324   queue.o
+        36          8        392          0       1024        828   startup_stm32f407xx.o
+       144         24          0         12          0       8725   stm32f4xx_hal.o
+       816          0          0          0          0      10011   stm32f4xx_hal_can.o
+       198         14          0          0          0      33911   stm32f4xx_hal_cortex.o
+       182          0          0          0          0       2079   stm32f4xx_hal_dma.o
+       520         52          0          0          0       2143   stm32f4xx_hal_gpio.o
+        56          4          0          0          0        854   stm32f4xx_hal_msp.o
+      1344         72          0          0          0       5208   stm32f4xx_hal_rcc.o
+      1110         72          0          0          0      10077   stm32f4xx_hal_tim.o
+       148         28          0          0          0       2433   stm32f4xx_hal_tim_ex.o
       1478         16          0          0          0       9838   stm32f4xx_hal_uart.o
-       194         70          0          0          0       9051   stm32f4xx_it.o
-        16          4         24          4          0       1139   system_stm32f4xx.o
-      2084        168          0         60       1220      26820   tasks.o
-       160         12          0          0         72       1686   tim.o
-       972         80          0         20        280      32083   timers.o
-       828         90          0          0        408       5191   usart.o
+       194         70          0          0          0       8895   stm32f4xx_it.o
+        16          4         24          4          0       1111   system_stm32f4xx.o
+      2084        168          0         60       1220      26748   tasks.o
+       160         12          0          0         72       1670   tim.o
+       972         80          0         20        280      32027   timers.o
+       828         90          0          0        408       5123   usart.o
 
     ----------------------------------------------------------------------
-     15206       1042        752        208      20332    1009842   Object Totals
+     15206       1042        752        208      20332    1009150   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         40          0          0          0          4          0   (incl. Padding)
 
@@ -3396,8 +3396,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     19432       1332       1040        212      20332     994546   Grand Totals
-     19432       1332       1040        212      20332     994546   ELF Image Totals
+     19432       1332       1040        212      20332     993854   Grand Totals
+     19432       1332       1040        212      20332     993854   ELF Image Totals
      19432       1332       1040        212          0          0   ROM Totals
 
 ==============================================================================

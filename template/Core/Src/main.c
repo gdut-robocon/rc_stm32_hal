@@ -103,14 +103,8 @@ int main(void)
   MX_TIM2_Init();
 	 
   /* USER CODE BEGIN 2 */
-
-	HAL_TIM_Base_Start_IT(&htim2);
-	
-
-//HAL_UART_Receive_IT(&huart4, (uint8_t *)kRxBuffer, 50);
-//_HAL_UART_ENABLE_IT(&huart4,UART_IT_RXNE);
-HAL_UART_Receive_IT(&huart4, &ch, 1);
-//	MotorInit();
+	HAL_TIM_Base_Start_IT(&htim2); //读取航模遥控器
+	HAL_UART_Receive_IT(&huart4, &ch, 1);//读取action全场定位模块
   /* USER CODE END 2 */
 
   /* Init scheduler */

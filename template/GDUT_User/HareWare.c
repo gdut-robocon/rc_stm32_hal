@@ -6,17 +6,7 @@
 #include "tim.h"
 #include "gpio.h"
 
-uint8_t * kRxBuffer;
-  uint8_t ch;
-	static union {
-		uint8_t data[24];
-		float ActVal[6];
-	} posture;
-
-	static uint8_t count = 0;
-	static uint8_t i = 0;
-
-//电机初始化
+/***********************电机初始化********************/
 void MotorInit(void)
 {
 	/*********舵轮初始化*********/
@@ -52,7 +42,6 @@ void MotorInit(void)
 Air_Contorl  Device;
 //定义变量
 static uint16_t PPM_buf[10]={0};
-//uint16_t PPM_Databuf[10]={0};
 uint8_t ppm_update_flag=0;
 uint32_t now_ppm_time_send=0;
 uint32_t TIME_ISR_CNT=0,LAST_TIME_ISR_CNT=0;
@@ -133,6 +122,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 
 /***********************************************action************************************/
+uint8_t * kRxBuffer;
+uint8_t ch;
+	static union {
+		uint8_t data[24];
+		float ActVal[6];
+	} posture;
+
+	static uint8_t count = 0;
+	static uint8_t i = 0;
 //action数据结构体
 ACTION_GL_POS ACTION_GL_POS_DATA;
 ROBOT_REAL_POS ROBOT_REAL_POS_DATA = {0, 0, 0};
