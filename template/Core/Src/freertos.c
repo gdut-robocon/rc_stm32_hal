@@ -191,6 +191,7 @@ void move_base(void *argument)
   /* Infinite loop */
   for(;;)
   {
+
     osDelay(1);
   }
   /* USER CODE END move_base */

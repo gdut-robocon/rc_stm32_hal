@@ -23,13 +23,15 @@
 #include "stm32f4xx_it.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "HareWare.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
+extern uint8_t * kRxBuffer;
+	
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/
@@ -291,9 +293,9 @@ void USART1_IRQHandler(void)
 void UART4_IRQHandler(void)
 {
   /* USER CODE BEGIN UART4_IRQn 0 */
-
+HAL_UART_Receive_IT(&huart4, &ch, 1);
   /* USER CODE END UART4_IRQn 0 */
-  HAL_UART_IRQHandler(&huart4);
+    HAL_UART_IRQHandler(&huart4);
   /* USER CODE BEGIN UART4_IRQn 1 */
 
   /* USER CODE END UART4_IRQn 1 */

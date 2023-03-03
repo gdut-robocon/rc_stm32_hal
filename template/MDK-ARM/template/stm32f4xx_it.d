@@ -50,3 +50,4 @@ template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVD
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+template\stm32f4xx_it.o: ../GDUT_User/HareWare.h

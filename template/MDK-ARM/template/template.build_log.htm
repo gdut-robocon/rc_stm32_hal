@@ -21,35 +21,22 @@ Target DLL:      CMSIS_AGDI.dll V1.21.12.0
 Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
-D:\Desktop\RC\rc_stm32_hal-main\rc_stm32_hal-main\template\MDK-ARM\template.uvprojx
-Project File Date:  02/22/2023
+D:\Desktop\RC_PD\llyisdying(1)\template\MDK-ARM\template.uvprojx
+Project File Date:  03/02/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'template'
-assembling startup_stm32f407xx.s...
-compiling HareWare.c...
+compiling stm32f4xx_it.c...
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT"
   #define __FPU_PRESENT             1U       /*!< FPU present                                   */
 ../Drivers/CMSIS/Include/core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"
         #define __FPU_USED       1U
-../GDUT_User/MoveBase.h(123): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\GDUT_User\HareWare.c(43): warning:  #177-D: variable "PPM_buf" was declared but never referenced
-  static uint16_t PPM_buf[10]={0};
-..\GDUT_User\HareWare.c: 4 warnings, 0 errors
-compiling tim.c...
-../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h(52): warning:  #47-D: incompatible redefinition of macro "__FPU_PRESENT"
-  #define __FPU_PRESENT             1U       /*!< FPU present                                   */
-../Drivers/CMSIS/Include/core_cm4.h(79): warning:  #47-D: incompatible redefinition of macro "__FPU_USED"
-        #define __FPU_USED       1U
-../GDUT_User/MoveBase.h(123): warning:  #1-D: last line of file ends without a newline
-  #endif
-../Core/Src/tim.c: 3 warnings, 0 errors
+../Core/Src/stm32f4xx_it.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=14820 RO-data=752 RW-data=200 ZI-data=20248  
+Program Size: Code=19432 RO-data=1040 RW-data=212 ZI-data=20332  
 FromELF: creating hex file...
-"template\template.axf" - 0 Error(s), 7 Warning(s).
+"template\template.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -72,7 +59,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.1.0
-Build Time Elapsed:  00:00:03
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
