@@ -331,6 +331,10 @@
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
+<<<<<<< Updated upstream
+=======
+      <Focus>0</Focus>
+>>>>>>> Stashed changes
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>../Core/Src/can.c</PathWithFileName>
