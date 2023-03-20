@@ -35,13 +35,20 @@ extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
 
 /* USER CODE BEGIN Private defines */
-
+#define CAN_RxExtId 0x0000
+#define CAN_TxExtId 0x0000
 /* USER CODE END Private defines */
 
 void MX_CAN1_Init(void);
 void MX_CAN2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
+void CAN1_Filter_Init(void);   //过滤器配置函数
+uint8_t CAN_Send_Msg(uint8_t* msg,uint8_t len);  //数据发送函数
+ 
+extern CAN_TxHeaderTypeDef	TxHeader;      //发送
+extern CAN_RxHeaderTypeDef	RxHeader;      //接收
+extern uint8_t	RxData[8];   //数据接收数组
 
 /* USER CODE END Prototypes */
 

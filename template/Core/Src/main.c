@@ -25,7 +25,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "moto.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -103,6 +103,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	HAL_TIM_Base_Start_IT(&htim2);
+	HAL_CAN_Start(&hcan1);
+//	MotorInit();
   /* USER CODE END 2 */
 
   /* Init scheduler */
