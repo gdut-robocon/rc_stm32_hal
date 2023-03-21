@@ -25,10 +25,10 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "moto.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "HareWare.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -42,7 +42,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-int rdata;
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -70,7 +70,6 @@ void MX_FREERTOS_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
 
   /* USER CODE END 1 */
 
@@ -101,10 +100,11 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   MX_TIM2_Init();
-	 
   /* USER CODE BEGIN 2 */
-	HAL_TIM_Base_Start_IT(&htim2); //读取航模遥控器
-	HAL_UART_Receive_IT(&huart4, &ch, 1);//读取action全场定位模块
+
+	HAL_TIM_Base_Start_IT(&htim2);
+	HAL_CAN_Start(&hcan1);
+//	MotorInit();
   /* USER CODE END 2 */
 
   /* Init scheduler */

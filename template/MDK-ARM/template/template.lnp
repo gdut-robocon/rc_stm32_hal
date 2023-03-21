@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu Cortex-M4.fp
 "template\startup_stm32f407xx.o"
 "template\main.o"
 "template\gpio.o"
@@ -11,6 +11,9 @@
 "template\elmo.o"
 "template\movebase.o"
 "template\hareware.o"
+"template\moto.o"
+"template\calculation.o"
+"template\pid.o"
 "template\stm32f4xx_hal_can.o"
 "template\stm32f4xx_hal_rcc.o"
 "template\stm32f4xx_hal_rcc_ex.o"
@@ -41,6 +44,6 @@
 "template\port.o"
 "../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4l_math.lib"
 --library_type=microlib --strict --scatter "template\template.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "template.map" -o template\template.axf

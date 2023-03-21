@@ -58,14 +58,6 @@ typedef struct ROBOT_REAL_POS
   float POS_YAW;
 }ROBOT_REAL_POS;
 
-//extern
-extern Air_Contorl  Device;
-extern ACTION_GL_POS ACTION_GL_POS_DATA;
-extern float OFFSET_YAW;
-extern struct ROBOT_REAL_POS ROBOT_REAL_POS_DATA;
-extern uint8_t ch;
- 
-
 
 //define
 #define AIR_L_SHORT		PPM_Databuf[4]				//AUX4 1000~2000//没用
@@ -81,5 +73,12 @@ extern uint8_t ch;
 //action数据校准
 #define INSTALL_ERROR_Y		190.3f
 #define INSTALL_ERROR_X		0
-
+#define USART_REC_LEN     200   //定义最大接收字节数 200
+#define RXBUFFERSIZE   1 //缓存大小
 #endif
+//extern
+extern Air_Contorl  Device;
+extern ACTION_GL_POS ACTION_GL_POS_DATA;
+extern float OFFSET_YAW;
+extern struct ROBOT_REAL_POS ROBOT_REAL_POS_DATA;
+extern unsigned char aRxBuffer[RXBUFFERSIZE];//HAL库USART接收Buffer\

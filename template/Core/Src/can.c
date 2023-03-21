@@ -19,9 +19,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "can.h"
-
+#include "moto.h"
 /* USER CODE BEGIN 0 */
-
+CAN_TxHeaderTypeDef	TxHeader;      //发送
+uint8_t	RxData[8];  //数据接收数组，can的数据帧只有8帧
+int Rx_Flag =1;
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan1;
@@ -39,11 +41,11 @@ void MX_CAN1_Init(void)
 
   /* USER CODE END CAN1_Init 1 */
   hcan1.Instance = CAN1;
-  hcan1.Init.Prescaler = 2;
+  hcan1.Init.Prescaler = 3;
   hcan1.Init.Mode = CAN_MODE_NORMAL;
   hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1.Init.TimeSeg1 = CAN_BS1_14TQ;
-  hcan1.Init.TimeSeg2 = CAN_BS2_6TQ;
+  hcan1.Init.TimeSeg1 = CAN_BS1_9TQ;
+  hcan1.Init.TimeSeg2 = CAN_BS2_4TQ;
   hcan1.Init.TimeTriggeredMode = DISABLE;
   hcan1.Init.AutoBusOff = ENABLE;
   hcan1.Init.AutoWakeUp = DISABLE;
@@ -55,6 +57,8 @@ void MX_CAN1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN CAN1_Init 2 */
+  CAN1_Filter_Init();
+	HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
 
   /* USER CODE END CAN1_Init 2 */
 
@@ -232,6 +236,70 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 }
 
 /* USER CODE BEGIN 1 */
+/*CAN过滤器初始化*/
+void CAN1_Filter_Init(void)
+{
+	CAN_FilterTypeDef sFilterConfig;
+	
+  sFilterConfig.FilterBank = 0;                    /* 过滤器组0 */
+  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;  /* 屏蔽位模式 */
+  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT; /* 32位。*/
+  
+  sFilterConfig.FilterIdHigh         = (((uint32_t)CAN_RxExtId<<3)&0xFFFF0000)>>16;				/* 要过滤的ID高位 *///0x0000
+  sFilterConfig.FilterIdLow          = (((uint32_t)CAN_RxExtId<<3)|CAN_ID_EXT|CAN_RTR_DATA)&0xFFFF; /* 要过滤的ID低位 *///0x0000
+//  sFilterConfig.FilterMaskIdHigh     = 0xFFFF;			/* 过滤器高16位每位必须匹配 */
+//  sFilterConfig.FilterMaskIdLow      = 0xFFFF;			/* 过滤器低16位每位必须匹配 */
+	sFilterConfig.FilterMaskIdHigh     = 0x0000;			
+  sFilterConfig.FilterMaskIdLow      = 0x0000;
+  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;           /* 过滤器被关联到FIFO 0 */
+  sFilterConfig.FilterActivation = ENABLE;          /* 使能过滤器 */ 
+  sFilterConfig.SlaveStartFilterBank = 14;
+	
+	if (HAL_CAN_ConfigFilter(&hcan1, &sFilterConfig) != HAL_OK)
+  {
+		/* Filter configuration Error */
+    Error_Handler();
+  }
+	
+  if (HAL_CAN_Start(&hcan1) != HAL_OK)
+  {
+    /* Start Error */
+    Error_Handler();
+  }
+	
+	  /*##-4- Activate CAN RX notification #######################################*/
+  if (HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING) != HAL_OK)
+  {
+    /* Start Error */
+    Error_Handler();
+  }
+	
+	TxHeader.ExtId=CAN_TxExtId;        //扩展标识符(29位)
+	TxHeader.IDE=CAN_ID_EXT;    //使用标准帧
+	TxHeader.RTR=CAN_RTR_DATA;  //数据帧
+	TxHeader.DLC=8; 
+	TxHeader.TransmitGlobalTime = DISABLE;
+	
+
+}
+
+int o=0;
+/*CAN接收中断函数*/
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
+{
+
+		
+	if(hcan == &hcan1)
+	{
+	CAN_RxHeaderTypeDef	RxHeader;      //接收
+		Rx_Flag =1;  //接收标志位
+		HAL_CAN_GetRxMessage(&hcan1, CAN_RX_FIFO0, &RxHeader, RxData);
+		m3508_update_m3508_info(&RxHeader,RxData);  // M3508电机数据处理
+		M3508AngleIntegral(&M2006_CHASSIS_MOTOR_REAL_INFO[0]);//角度积分
+		o++;
+	}
+}
+
 
 /* USER CODE END 1 */
 

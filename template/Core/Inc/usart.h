@@ -39,7 +39,7 @@ extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN Private defines */
-
+typedef struct __FILE FILE;
 /* USER CODE END Private defines */
 
 void MX_UART4_Init(void);
