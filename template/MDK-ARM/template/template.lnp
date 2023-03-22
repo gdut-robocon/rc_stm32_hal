@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp
+--cpu=Cortex-M4.fp
 "template\startup_stm32f407xx.o"
 "template\main.o"
 "template\gpio.o"
@@ -44,6 +44,6 @@
 "template\port.o"
 "../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4l_math.lib"
 --library_type=microlib --strict --scatter "template\template.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "template.map" -o template\template.axf

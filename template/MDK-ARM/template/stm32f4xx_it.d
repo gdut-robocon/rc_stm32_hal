@@ -7,7 +7,7 @@ template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/core_cm4.h
-template\stm32f4xx_it.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/cmsis_version.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-template\stm32f4xx_it.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -35,8 +35,8 @@ template\stm32f4xx_it.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.
 template\stm32f4xx_it.o: ../GDUT_User/MoveBase.h
 template\stm32f4xx_it.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\stm32f4xx_it.o: ../Drivers/CMSIS/Include/core_cm4.h
-template\stm32f4xx_it.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\string.h
-template\stm32f4xx_it.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\math.h
+template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+template\stm32f4xx_it.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 template\stm32f4xx_it.o: ../Core/Inc/can.h
 template\stm32f4xx_it.o: ../Core/Inc/main.h
 template\stm32f4xx_it.o: ../GDUT_User/elmo.h
@@ -50,3 +50,4 @@ template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVD
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 template\stm32f4xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+template\stm32f4xx_it.o: ../GDUT_User/HareWare.h
