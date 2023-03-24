@@ -19,8 +19,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "can.h"
-#include "moto.h"
+
 /* USER CODE BEGIN 0 */
+#include "moto.h"
 CAN_TxHeaderTypeDef	TxHeader;      //发送
 uint8_t	RxData[8];  //数据接收数组，can的数据帧只有8帧
 int Rx_Flag =1;

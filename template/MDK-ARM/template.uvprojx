@@ -648,11 +648,6 @@
           <GroupName>GDUT_User</GroupName>
           <Files>
             <File>
-              <FileName>elmo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\GDUT_User\elmo.c</FilePath>
-            </File>
-            <File>
               <FileName>MoveBase.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\GDUT_User\MoveBase.c</FilePath>
@@ -676,6 +671,11 @@
               <FileName>PID.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\GDUT_User\PID.c</FilePath>
+            </File>
+            <File>
+              <FileName>elmo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GDUT_User\elmo.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2281,6 +2281,9 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
           <GroupName>Middlewares/Library/DSP Library/DSP Library</GroupName>
           <GroupOption>
             <CommonProperty>
@@ -2370,9 +2373,6 @@
               </FileOption>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>

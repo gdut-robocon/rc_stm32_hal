@@ -25,10 +25,10 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "moto.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "moto.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
