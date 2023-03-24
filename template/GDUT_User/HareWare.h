@@ -58,6 +58,11 @@ typedef struct ROBOT_REAL_POS
   float POS_YAW;
 }ROBOT_REAL_POS;
 
+extern Air_Contorl  Device;
+extern ACTION_GL_POS ACTION_GL_POS_DATA;
+extern float OFFSET_YAW;
+extern struct ROBOT_REAL_POS ROBOT_REAL_POS_DATA;
+extern uint8_t ch;
 
 //define
 #define AIR_L_SHORT		PPM_Databuf[4]				//AUX4 1000~2000//√ª”√

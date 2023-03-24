@@ -23,10 +23,10 @@
 #include "task.h"
 #include "main.h"
 #include "cmsis_os.h"
-#include "moto.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "moto.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -167,7 +167,6 @@ void MX_FREERTOS_Init(void) {
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
-int i;
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
@@ -177,7 +176,7 @@ void StartDefaultTask(void *argument)
   {
 		uint16_t speedtest=0; 
 		M3508_CHASSIS_MOTOR_REAL_INFO[0].TARGET_CURRENT=speedtest;
-		i++;
+
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
@@ -245,7 +244,6 @@ void Auto(void *argument)
 * @retval None
 */
 /* USER CODE END Header_data_update */
-int m;
 void data_update(void *argument)
 {
   /* USER CODE BEGIN data_update */
@@ -254,7 +252,7 @@ void data_update(void *argument)
   {
 		chassis_m3508_send_motor_currents();
 		
-		m++;
+	
     osDelay(5);
   }
   /* USER CODE END data_update */
