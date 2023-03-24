@@ -1,7 +1,7 @@
 template\freertos.o: ../Core/Src/freertos.c
 template\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+template\freertos.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+template\freertos.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 template\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 template\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 template\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -44,8 +44,8 @@ template\freertos.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template\freertos.o: ../GDUT_User/MoveBase.h
 template\freertos.o: ../Middlewares/ST/ARM/DSP/Inc/arm_math.h
 template\freertos.o: ../Drivers/CMSIS/Include/core_cm4.h
-template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-template\freertos.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+template\freertos.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\string.h
+template\freertos.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\math.h
 template\freertos.o: ../Core/Inc/can.h
 template\freertos.o: ../Core/Inc/main.h
 template\freertos.o: ../GDUT_User/elmo.h

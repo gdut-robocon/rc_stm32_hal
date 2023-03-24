@@ -5,17 +5,6 @@
 #include "main.h"
 #include "tim.h"
 #include "gpio.h"
-
-uint8_t * kRxBuffer;
-  uint8_t ch;
-	static union {
-		uint8_t data[24];
-		float ActVal[6];
-	} posture;
-
-	static uint8_t count = 0;
-	static uint8_t i = 0;
-
 //电机初始化
 void MotorInit(void)
 {
@@ -24,7 +13,7 @@ void MotorInit(void)
 	ElmoInit(&hcan1);
 	ElmoInit(&hcan2);
 
-		//配置驱动轮电机速度环 acc/dec 100,000,000
+	//配置驱动轮电机速度环 acc/dec 100,000,000
 	VelLoopCfg(&hcan1, LEFT_FRONT_ID, 100000000, 100000000);
 	VelLoopCfg(&hcan1, RIGHT_FRONT_ID, 100000000, 100000000);
 	VelLoopCfg(&hcan1, LEFT_REAR_ID, 100000000, 100000000);
@@ -136,18 +125,30 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 //action数据结构体
 ACTION_GL_POS ACTION_GL_POS_DATA;
 ROBOT_REAL_POS ROBOT_REAL_POS_DATA = {0, 0, 0};
-
+unsigned char aRxBuffer[1];//HAL库USART接收Buffer
 float OFFSET_YAW = 0;
-
-
 
 //串口4中断函数
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 {
-	
-	if(huart->Instance==UART4)//如果是串口4.
+	if(huart->Instance==UART4)//如果是串口4
 	{
+	/***************************************/
+	static uint8_t ch;
+	static union {
+		uint8_t data[24];
+		float ActVal[6];
+	} posture;
+
+	static uint8_t count = 0;
+	static uint8_t i = 0;
+if(__HAL_UART_GET_FLAG(&huart4, UART_FLAG_RXNE) != RESET)
+
+	{
+		ch = (uint8_t)(huart4.Instance->DR & 0xFF);
+
+
 		switch (count)
 		{
 			case 0:
@@ -195,7 +196,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 				{
 					//更新传感器数据
 					//不直接跟新，进行差分运算
-					Update_Action(posture.ActVal);
+					
+				
+					
+	Update_Action(posture.ActVal);
 				}
 				count = 0;
 			}
@@ -204,10 +208,10 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 				count = 0;
 				break;
 		}
-	HAL_UART_Receive_IT(&huart4, &ch, 1);
+	}
 	}
 	
-
+	HAL_UART_Receive_IT(&huart4, (uint8_t *)&aRxBuffer, 1);   //再开启接收中断
 }
 
 
