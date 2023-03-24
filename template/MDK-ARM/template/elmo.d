@@ -3,7 +3,7 @@ template\elmo.o: ..\GDUT_User\elmo.h
 template\elmo.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 template\elmo.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 template\elmo.o: ../Drivers/CMSIS/Include/core_cm4.h
-template\elmo.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+template\elmo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 template\elmo.o: ../Drivers/CMSIS/Include/cmsis_version.h
 template\elmo.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 template\elmo.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -15,7 +15,7 @@ template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 template\elmo.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-template\elmo.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+template\elmo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 template\elmo.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h

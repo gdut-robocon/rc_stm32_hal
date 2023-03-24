@@ -1,6 +1,6 @@
 template\calculation.o: ..\GDUT_User\calculation.c
 template\calculation.o: ..\GDUT_User\calculation.h
-template\calculation.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+template\calculation.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 template\calculation.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 template\calculation.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 template\calculation.o: ../Drivers/CMSIS/Include/core_cm4.h
@@ -15,7 +15,7 @@ template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 template\calculation.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-template\calculation.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+template\calculation.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -34,4 +34,4 @@ template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex
 template\calculation.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 template\calculation.o: ..\GDUT_User\moto.h
 template\calculation.o: ..\GDUT_User\PID.h
-template\calculation.o: D:\Software\keil5\ARM\ARMCC\Bin\..\include\math.h
+template\calculation.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
